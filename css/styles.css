@@ -591,6 +591,9 @@ body {
 .review-form-input:focus + .review-form-field-icon {
   fill: #4d5ae5;
 }
+.review-form-field-message {
+  margin-bottom: 16px;
+}
 .review-form-message {
   font-size: 12px;
   line-height: 1.17;

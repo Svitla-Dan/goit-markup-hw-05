@@ -61,7 +61,9 @@
       <section class="hero">
         <div class="container">
           <h1 class="heading">Effective Solutions for Your Business</h1>
-          <button type="button" class="btn-link">Order Service</button>
+          <button type="button" class="btn-link" onclick="openModal()">
+            Order Service
+          </button>
         </div>
       </section>
       <!-- =========================== section 2 ==============-->
@@ -513,9 +515,9 @@
       </div>
     </footer>
     <!-- ===================Modal-overlay===================== -->
-    <div class="backdrop">
+    <div class="backdrop" id="backdrop">
       <div class="modal">
-        <button class="modal-close-btn" type="button">
+        <button class="modal-close-btn" type="button" onclick="closeModal()">
           <svg
             class="modal-close-btn-icon"
             width="8"
@@ -624,5 +626,16 @@
         </form>
       </div>
     </div>
+    <script>
+      function openModal() {
+        modal = document.getElementById("backdrop");
+        modal.classList.add("is-open");
+      }
+
+      function closeModal() {
+        modal = document.getElementById("backdrop");
+        modal.classList.remove("is-open");
+      }
+    </script>
   </body>
 </html>
